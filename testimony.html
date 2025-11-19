@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read what our travelers say about their experiences with WanderLust">
+    <title>Testimonials - What Our Travelers Say | WanderLust</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=32&h=32&fit=crop">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-logo" onclick="window.location.href='index.html'">
+                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=80&h=80&fit=crop"
+                    alt="WanderLust Logo" class="logo-image" id="logoImage">
+                <h1 class="logo-text" id="logoText">WanderLust</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="destinations.html" class="nav-link">Destinations</a>
+                <a href="index.html#packages" class="nav-link">Packages</a>
+                <a href="testimony.html" class="nav-link active">Testimonials</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Desktop Actions -->
+            <div class="header-actions">
+                <button class="btn btn-outline" onclick="window.location.href='auth.html'">
+                    <span class="animate-emoji-float">👤</span>
+                    <span>Login</span>
+                </button>
+                <button class="btn btn-primary" onclick="window.location.href='booking.html'">
+                    <span class="animate-emoji-rotate">✈️</span>
+                    <span>Book Now</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path id="menuIcon" d="M3 12h18M3 6h18M3 18h18"></path>
+                    <path id="closeIcon" d="M18 6L6 18M6 6l12 12" style="display: none;"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="index.html#packages">Packages</a>
+                <a href="testimony.html">Testimonials</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="mobile-actions">
+                    <button class="btn btn-outline" onclick="window.location.href='auth.html'"
+                        style="width: 100%;">Login</button>
+                    <button class="btn btn-primary" onclick="window.location.href='booking.html'"
+                        style="width: 100%;">Book Now</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+</html>

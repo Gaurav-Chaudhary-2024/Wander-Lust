@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{metaDescription}}">
+  <meta name="keywords" content="{{metaKeywords}}">
+  <meta name="author" content="WanderLust Travel Agency">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ogUrl}}">
+  <meta property="og:title" content="{{ogTitle}}">
+  <meta property="og:description" content="{{ogDescription}}">
+  <meta property="og:image" content="{{ogImage}}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ogUrl}}">
+  <meta property="twitter:title" content="{{ogTitle}}">
+  <meta property="twitter:description" content="{{ogDescription}}">
+  <meta property="twitter:image" content="{{ogImage}}">
+  
+  <title>{{title}}</title>
+
+  <!-- Your CSS files -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/dark-mode.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=32&h=32&fit=crop">
+  
+  <!-- Structured Data (JSON-LD) -->
+  {{#if structuredData}}
+  <script type="application/ld+json">
+  {{{structuredData}}}
+  </script>
+  {{/if}}
+  
+  <!-- Google Maps API (if needed) -->
+  {{#if (eq page 'destinations')}}
+  <script src="https://maps.googleapis.com/maps/api/js?key={{mapsApiKey}}&libraries=places"></script>
+  {{/if}}
+</head>
+<body>
+
+  {{> header}}
+
+  {{{body}}}
+
+  {{> footer}}
+
+  <!-- Your Global JS -->
+  <script src="/js/lazy-load.js"></script>
+  <script src="/js/dark-mode.js"></script>
+  <script src="/js/scroll-animations.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/api-client.js"></script>
+  <script src="/js/account-switcher.js"></script>
+  
+  <!-- Page-specific JS -->
+  {{#if (eq page 'home')}}
+    <script src="/js/carousel.js"></script>
+    <script src="/js/animations.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'destinations')}}
+    <script src="/js/destinations.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'auth')}}
+    <script src="/js/auth.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'booking')}}
+    <script src="/js/booking.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'contact')}}
+    <script src="/js/contact.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'testimonials')}}
+    <script src="/js/testimonials.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'dashboard')}}
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/personalization.js"></script>
+  {{/if}}
+  
+  {{#if (eq page 'destinations')}}
+    <script src="/js/maps.js"></script>
+  {{/if}}
+  
+  <!-- Image optimization helper -->
+  <script src="/js/image-optimizer.js"></script>
+</body>
+</html>

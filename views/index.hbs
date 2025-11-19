@@ -1,0 +1,298 @@
+<!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <!-- Background images will be dynamically inserted here -->
+      <div id="heroImages"></div>
+      <div class="hero-overlay"></div>
+
+      <!-- Location Badge & Indicators -->
+      <div class="hero-location">
+        <div class="location-badge" id="locationBadge">
+          <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="locationText">Maldives</span>
+        </div>
+
+        <div class="hero-indicators" id="heroIndicators"></div>
+      </div>
+
+      <!-- Floating Particles -->
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content" id="heroContent">
+      <h1 class="hero-title">See the World, Live the Adventure</h1>
+      <p class="hero-subtitle">Explore breathtaking destinations and create unforgettable memories with our expertly
+        crafted travel experiences</p>
+
+      <!-- Search Bar -->
+      <div class="hero-search">
+        <div class="search-grid">
+          <div class="search-field">
+            <label class="search-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Destination
+            </label>
+            <input type="text" class="search-input" placeholder="Where do you want to go?">
+          </div>
+
+          <div class="search-field">
+            <label class="search-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Check-in
+            </label>
+            <input type="date" class="search-input" placeholder="dd-mm-yyyy">
+          </div>
+
+          <div class="search-field">
+            <label class="search-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              Guests
+            </label>
+            <input type="text" class="search-input" placeholder="2 guests">
+          </div>
+
+          <button class="btn btn-primary btn-lg" onclick="handleHeroSearch()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <span>Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card scroll-scale-in">
+          <div class="stat-icon animate-icon-rotate">🌍</div>
+          <div class="stat-number">150+</div>
+          <p class="stat-label">Destinations</p>
+        </div>
+        <div class="stat-card scroll-scale-in">
+          <div class="stat-icon animate-icon-rotate">😊</div>
+          <div class="stat-number">50K+</div>
+          <p class="stat-label">Happy Travelers</p>
+        </div>
+        <div class="stat-card scroll-scale-in">
+          <div class="stat-icon animate-icon-rotate">⭐</div>
+          <div class="stat-number">15+</div>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="stat-card scroll-scale-in">
+          <div class="stat-icon animate-icon-rotate">🛟</div>
+          <div class="stat-number">24/7</div>
+          <p class="stat-label">Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header scroll-fade-in">
+        <span class="badge">Why Choose WanderLust</span>
+        <h2 class="section-title">Your Perfect Travel Partner</h2>
+        <p class="section-description">We make your dream destinations accessible with our expertise and personalized
+          service</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card scroll-slide-up">
+          <div class="feature-icon animate-icon-scale">✈️</div>
+          <h3 class="feature-title">Expert Planning</h3>
+          <p class="feature-description">Our travel experts craft personalized itineraries tailored to your preferences
+            and budget.</p>
+        </div>
+        <div class="feature-card scroll-slide-up">
+          <div class="feature-icon animate-icon-scale">🛡️</div>
+          <h3 class="feature-title">Safe & Secure</h3>
+          <p class="feature-description">Travel with confidence knowing you're protected with comprehensive insurance
+            and 24/7 support.</p>
+        </div>
+        <div class="feature-card scroll-slide-up">
+          <div class="feature-icon animate-icon-scale">💎</div>
+          <h3 class="feature-title">Best Value</h3>
+          <p class="feature-description">Get the most out of your investment with our competitive prices and exclusive
+            deals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Packages Section -->
+  <section id="packages" class="packages-section">
+    <div class="packages-bg-decoration" id="packagesBg"></div>
+
+    <div class="container">
+      <div class="section-header scroll-fade-in">
+        <span class="badge">Travel Packages</span>
+        <h2 class="section-title">Choose Your Perfect Package</h2>
+        <p class="section-description">From budget-friendly adventures to luxury escapes, we have the perfect package
+          for every traveler.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Budget Explorer -->
+        <div class="package-card animate-shadow-pulse scroll-slide-up">
+          <h3 class="package-title">Budget Explorer</h3>
+          <div class="package-price animate-price-glow">$999</div>
+          <p class="package-duration">5 days / 4 nights</p>
+          <div class="package-rating">
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star" style="opacity: 0.3;">⭐</span>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature feature-item-1">
+              <span class="feature-check">✓</span>
+              <span>3-star accommodation</span>
+            </li>
+            <li class="package-feature feature-item-2">
+              <span class="feature-check">✓</span>
+              <span>Daily breakfast included</span>
+            </li>
+            <li class="package-feature feature-item-3">
+              <span class="feature-check">✓</span>
+              <span>Group transportation</span>
+            </li>
+            <li class="package-feature feature-item-4">
+              <span class="feature-check">✓</span>
+              <span>Local tour guide</span>
+            </li>
+            <li class="package-feature feature-item-5">
+              <span class="feature-check">✓</span>
+              <span>Travel insurance</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='/booking'">Book
+            Now</button>
+        </div>
+
+        <!-- Premium Adventure -->
+        <div class="package-card animate-shadow-pulse scroll-slide-up">
+          <span class="package-badge animate-badge-pulse">POPULAR</span>
+          <h3 class="package-title">Premium Adventure</h3>
+          <div class="package-price animate-price-glow">$2,499</div>
+          <p class="package-duration">7 days / 6 nights</p>
+          <div class="package-rating">
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature feature-item-1">
+              <span class="feature-check">✓</span>
+              <span>4-star luxury hotels</span>
+            </li>
+            <li class="package-feature feature-item-2">
+              <span class="feature-check">✓</span>
+              <span>All meals included</span>
+            </li>
+            <li class="package-feature feature-item-3">
+              <span class="feature-check">✓</span>
+              <span>Private transportation</span>
+            </li>
+            <li class="package-feature feature-item-4">
+              <span class="feature-check">✓</span>
+              <span>Personal tour guide</span>
+            </li>
+            <li class="package-feature feature-item-5">
+              <span class="feature-check">✓</span>
+              <span>Travel insurance</span>
+            </li>
+            <li class="package-feature feature-item-6">
+              <span class="feature-check">✓</span>
+              <span>Spa treatments</span>
+            </li>
+            <li class="package-feature feature-item-7">
+              <span class="feature-check">✓</span>
+              <span>Adventure activities</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='/booking'">Book
+            Now</button>
+        </div>
+
+        <!-- Luxury Escape -->
+        <div class="package-card animate-shadow-pulse scroll-slide-up">
+          <h3 class="package-title">Luxury Escape</h3>
+          <div class="package-price animate-price-glow">$4,999</div>
+          <p class="package-duration">10 days / 9 nights</p>
+          <div class="package-rating">
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+            <span class="star">⭐</span>
+          </div>
+          <ul class="package-features">
+            <li class="package-feature feature-item-1">
+              <span class="feature-check">✓</span>
+              <span>5-star resort accommodation</span>
+            </li>
+            <li class="package-feature feature-item-2">
+              <span class="feature-check">✓</span>
+              <span>Gourmet dining experiences</span>
+            </li>
+            <li class="package-feature feature-item-3">
+              <span class="feature-check">✓</span>
+              <span>Private jet transfers</span>
+            </li>
+            <li class="package-feature feature-item-4">
+              <span class="feature-check">✓</span>
+              <span>Dedicated concierge</span>
+            </li>
+            <li class="package-feature feature-item-5">
+              <span class="feature-check">✓</span>
+              <span>Comprehensive insurance</span>
+            </li>
+            <li class="package-feature feature-item-6">
+              <span class="feature-check">✓</span>
+              <span>Exclusive experiences</span>
+            </li>
+            <li class="package-feature feature-item-7">
+              <span class="feature-check">✓</span>
+              <span>24/7 support</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='/booking'">Book
+            Now</button>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <button class="btn btn-primary btn-lg" onclick="window.location.href='/destinations'">
+          <span class="animate-emoji-float">🎯</span>
+          <span>Explore All Destinations</span>
+        </button>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,109 @@
+<div class="container" style="padding: 4rem 1rem; min-height: 70vh;">
+  <button class="back-btn" onclick="window.location.href='/dashboard'">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    Back to Dashboard
+  </button>
+
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">Complete Payment</h1>
+    <p style="color: var(--muted-foreground);">Enter your payment details to complete your booking</p>
+  </div>
+
+  <div style="max-width: 600px; margin: 0 auto;">
+    <!-- Booking Summary -->
+    <div id="bookingSummary" style="background: var(--card); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border); margin-bottom: 2rem;">
+      <h3 style="color: var(--primary); margin-bottom: 1rem;">Booking Summary</h3>
+      <div id="bookingDetails">
+        <p style="color: var(--muted-foreground);">Loading booking details...</p>
+      </div>
+    </div>
+
+    <!-- Payment Form -->
+    <div style="background: var(--card); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+      <form id="paymentForm">
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Payment Amount</label>
+          <input type="number" id="amount" step="0.01" min="0" required 
+            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px; font-size: 1.25rem; font-weight: 600;"
+            placeholder="0.00">
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Payment Method</label>
+          <select id="paymentMethod" required 
+            style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+            <option value="">Select payment method</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
+            <option value="cash">Cash</option>
+          </select>
+        </div>
+
+        <!-- Card Details (shown when credit/debit card selected) -->
+        <div id="cardDetails" style="display: none; margin-bottom: 1.5rem;">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Card Number</label>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456"
+              style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Expiry Date</label>
+              <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"
+                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">CVV</label>
+              <input type="text" id="cardCVV" maxlength="4" placeholder="123"
+                style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+            </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Cardholder Name</label>
+            <input type="text" id="cardName" placeholder="John Doe"
+              style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+          </div>
+        </div>
+
+        <!-- Billing Address -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="margin-bottom: 1rem; color: var(--primary);">Billing Address</h4>
+          <div style="margin-bottom: 1rem;">
+            <input type="text" id="billingStreet" placeholder="Street Address"
+              style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <input type="text" id="billingCity" placeholder="City"
+              style="padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+            <input type="text" id="billingZip" placeholder="ZIP Code"
+              style="padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <input type="text" id="billingState" placeholder="State"
+              style="padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+            <input type="text" id="billingCountry" placeholder="Country" value="USA"
+              style="padding: 0.75rem; border: 1px solid var(--border); border-radius: 4px;">
+          </div>
+        </div>
+
+        <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+          <p style="margin: 0; color: #92400e; font-size: 0.9rem;">
+            <strong>Note:</strong> This is a demo payment gateway. Your payment information will be stored but no actual transaction will be processed. Payment will be reviewed by admin before approval.
+          </p>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem; font-weight: 600;">
+          Submit Payment
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="/js/payment.js"></script>
+

@@ -1,0 +1,81 @@
+{
+  "featured": [
+    {
+      "name": "Eleanor Rigby",
+      "avatar": "https://i.pravatar.cc/150?img=1",
+      "rating": 5,
+      "review": "WanderLust made our honeymoon trip to the Maldives absolutely magical! Every detail was perfect, from the stunning overwater villa to the private dinners on the beach. Truly unforgettable!"
+    },
+    {
+      "name": "Arthur Penhaligon",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "rating": 5,
+      "review": "As an avid adventurer, I've used many travel services, but WanderLust stands out. Their Patagonia trekking expedition was meticulously planned and offered breathtaking views. Highly recommended!"
+    }
+  ],
+  "stories": [
+    {
+      "name": "Sophia Chen",
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "rating": 5,
+      "review": "My solo journey through Southeast Asia with WanderLust was eye-opening. The cultural immersion activities were fantastic. Sometimes communication",
+      "date": "2 days ago"
+    },
+    {
+      "name": "Marcus Thorne",
+      "avatar": "https://i.pravatar.cc/150?img=13",
+      "rating": 5,
+      "review": "The family vacation to Disney World was flawlessly executed by WanderLust. They handled everything, making it stress-free and truly enjoyable for everyone.",
+      "date": "1 week ago"
+    },
+    {
+      "name": "Isabella Rossi",
+      "avatar": "https://i.pravatar.cc/150?img=9",
+      "rating": 5,
+      "review": "Their expertise in European river cruises is unmatched. The Danube cruise was picturesque and luxurious. Can't wait for my next trip with them!",
+      "date": "2 weeks ago"
+    },
+    {
+      "name": "David Kim",
+      "avatar": "https://i.pravatar.cc/150?img=14",
+      "rating": 4,
+      "review": "The guided tour of Tokyo was incredible, very informative and fun. I wish there were more options for extended stays, but the core package",
+      "date": "3 weeks ago"
+    },
+    {
+      "name": "Olivia Green",
+      "avatar": "https://i.pravatar.cc/150?img=10",
+      "rating": 5,
+      "review": "WanderLust helped me plan the perfect surprise anniversary trip to Santorini. The hotel, transfers, and activities were all top-notch. My husband loved it!",
+      "date": "1 month ago"
+    },
+    {
+      "name": "Daniel Lee",
+      "avatar": "https://i.pravatar.cc/150?img=15",
+      "rating": 5,
+      "review": "The safari in Kenya was an adventure of a lifetime. The guides were knowledgeable and we saw so much wildlife. The accommodation was basic",
+      "date": "1 month ago"
+    },
+    {
+      "name": "Chloe White",
+      "avatar": "https://i.pravatar.cc/150?img=20",
+      "rating": 5,
+      "review": "My dream trip to Iceland was made real by WanderLust. The Northern Lights tour was stunning. Everything was seamless from start to finish.",
+      "date": "2 months ago"
+    },
+    {
+      "name": "Ethan Taylor",
+      "avatar": "https://i.pravatar.cc/150?img=33",
+      "rating": 5,
+      "review": "The Amazon rainforest cruise was an unforgettable experience. The wildlife was abundant and the naturalists were amazing. The food could have been",
+      "date": "2 months ago"
+    },
+    {
+      "name": "Mia Thompson",
+      "avatar": "https://i.pravatar.cc/150?img=23",
+      "rating": 5,
+      "review": "My cycling tour through the French countryside was brilliant. WanderLust arranged for excellent bikes and charming accommodations. A truly active",
+      "date": "3 months ago"
+    }
+  ]
+}

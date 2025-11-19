@@ -1,0 +1,293 @@
+<!-- Booking Hero -->
+  <section class="booking-hero">
+    <div class="booking-hero-content">
+      <h1 class="booking-hero-title">Embark on Your Next Adventure</h1>
+      <p class="booking-hero-description">
+        Effortlessly plan and book your dream vacation. Select your destination, dates, and travelers to get started.
+      </p>
+    </div>
+    <div class="booking-hero-image">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop" alt="Beach vacation" class="rounded-image">
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-grid">
+        <!-- Left Column - Booking Form -->
+        <div class="booking-form-column">
+          <div class="booking-card">
+            <h2 class="booking-section-title">Plan Your Adventure</h2>
+            
+            <!-- Trip Details -->
+            <div class="booking-subsection">
+              <h3 class="booking-subsection-title">Trip Details</h3>
+              
+              <div class="form-group">
+                <label for="destination" class="form-label">Destination</label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="10" r="3"></circle>
+                    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
+                  </svg>
+                  <select id="destination" class="form-select">
+                    <option value="">Select a destination</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="paris-france">Paris, France</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="tokyo-japan">Tokyo, Japan</option>
+                    <option value="santorini-greece">Santorini, Greece</option>
+                    <option value="bali-indonesia">Bali, Indonesia</option>
+                    <option value="dubai-uae">Dubai, UAE</option>
+                    <option value="new-york-usa">New York, USA</option>
+                    <option value="iceland">Iceland</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="peru">Peru</option>
+                    <option value="norway">Norway</option>
+                    <option value="australia">Australia</option>
+                    <option value="rome-italy">Rome, Italy</option>
+                    <option value="barcelona-spain">Barcelona, Spain</option>
+                    <option value="morocco">Morocco</option>
+                    <option value="new-zealand">New Zealand</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="canada">Canada</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="south-africa">South Africa</option>
+                  </select>
+                </div>
+                <button type="button" id="addToWishlistBtn" class="btn btn-outline" style="margin-top: 0.5rem; width: 100%;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                  Add to Wishlist
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Travel Dates</label>
+                <div class="date-range-inputs">
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <input type="date" id="checkIn" class="form-input" value="2025-10-27">
+                  </div>
+                  <span class="date-separator">-</span>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <input type="date" id="checkOut" class="form-input" value="2025-11-03">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Number of Travelers -->
+            <div class="booking-subsection">
+              <h3 class="booking-subsection-title">Number of Travelers</h3>
+              
+              <div class="travelers-grid">
+                <div class="form-group">
+                  <label for="adults" class="form-label">Adults (12+)</label>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <input type="number" id="adults" class="form-input" value="1" min="0">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="children" class="form-label">Children (2-11)</label>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <input type="number" id="children" class="form-input" value="0" min="0">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="infants" class="form-label">Infants (0-1)</label>
+                  <div class="input-with-icon">
+                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <input type="number" id="infants" class="form-input" value="0" min="0">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="booking-subsection">
+              <h3 class="booking-subsection-title">Contact Information</h3>
+              
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name</label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <input type="text" id="fullName" class="form-input" placeholder="John Doe" value="John Doe">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <input type="email" id="email" class="form-input" placeholder="john.doe@example.com" value="john.doe@example.com">
+                </div>
+                <small class="form-hint error">Invalid email format.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 123-4567" value="+1 (555) 123-4567">
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1.5rem;">Book Now</button>
+          </div>
+        </div>
+
+        <!-- Right Column - Summary -->
+        <div class="booking-summary-column">
+          <!-- Trip Summary Card -->
+          <div class="booking-card summary-card">
+            <h2 class="booking-section-title">Your Trip Summary</h2>
+            
+            <div class="summary-item">
+              <div class="summary-item-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="10" r="3"></circle>
+                  <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
+                </svg>
+                <span class="summary-item-label">Destination:</span>
+              </div>
+              <p class="summary-item-value">Paris, France</p>
+            </div>
+
+            <div class="summary-item">
+              <div class="summary-item-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="summary-item-label">Dates:</span>
+              </div>
+              <p class="summary-item-value">Oct 27, 2025 - Nov 03, 2025</p>
+            </div>
+
+            <div class="summary-travelers">
+              <div class="summary-item-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span class="summary-item-label">Travelers:</span>
+              </div>
+              <div class="travelers-summary">
+                <div class="traveler-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Adults: <strong>1</strong></span>
+                </div>
+                <div class="traveler-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Children: <strong>0</strong></span>
+                </div>
+                <div class="traveler-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span>Infants: <strong>0</strong></span>
+                </div>
+                <div class="traveler-total">Total Travelers: <strong>1</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Details Card -->
+          <div class="booking-card">
+            <h3 class="booking-subsection-title">Contact Details</h3>
+            
+            <div class="contact-detail">
+              <div class="contact-detail-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span class="contact-detail-label">Full Name:</span>
+              </div>
+              <p class="contact-detail-value">John Doe</p>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span class="contact-detail-label">Email:</span>
+              </div>
+              <p class="contact-detail-value">john.doe@example.com</p>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-detail-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span class="contact-detail-label">Phone:</span>
+              </div>
+              <p class="contact-detail-value">+1 (555) 123-4567</p>
+            </div>
+          </div>
+
+          <!-- Estimated Total Card -->
+          <div class="booking-card total-card">
+            <div class="total-header">
+              <h3 class="total-label">Estimated Total:</h3>
+              <div class="total-amount">$900.00</div>
+            </div>
+            <p class="total-note">Final price will be confirmed after review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

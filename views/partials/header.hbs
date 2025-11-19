@@ -1,0 +1,240 @@
+<!-- Header - Animates in on page load via main.js -->
+<header class="header" id="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="header-logo">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=80&h=80&fit=crop" alt="WanderLust Logo" class="logo-image" id="logoImage">
+      <h1 class="logo-text" id="logoText">WanderLust</h1>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/destinations" class="nav-link">Destinations</a>
+      <a href="/#packages" class="nav-link">Packages</a>
+      <a href="/testimonials" class="nav-link">Testimonials</a>
+      <a href="/about" class="nav-link">About</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Desktop Actions -->
+    <div class="header-actions">
+      {{#if isAuthenticated}}
+        {{#if (eq user.role "admin")}}
+          <button class="btn btn-outline" onclick="window.location.href='/admin'" style="background: #10b981; color: white; border-color: #10b981; font-weight: 600; box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);">
+            <span>⚙️</span>
+            <span>Admin Dashboard</span>
+          </button>
+        {{/if}}
+        <!-- User Dropdown Menu -->
+        <div class="user-dropdown-container" style="position: relative;">
+          <button class="user-avatar-btn" id="userAvatarBtn" onclick="toggleUserDropdown()" data-user-name="{{user.name}}" style="
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
+            border: 2px solid var(--border);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            👤
+          </button>
+          <!-- Dropdown Menu -->
+          <div class="user-dropdown-menu" id="userDropdownMenu" style="
+            display: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background: #2d3748;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            min-width: 250px;
+            z-index: 1000;
+            overflow: hidden;
+            animation: dropdownFadeIn 0.2s ease;
+          ">
+            <!-- User Info Section -->
+            <div style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <div style="font-weight: 600; color: white; font-size: 1rem; margin-bottom: 0.25rem;">{{user.name}}</div>
+              <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">{{user.email}}</div>
+            </div>
+            
+            <!-- Menu Items -->
+            <div style="padding: 0.5rem 0;">
+              <a href="/dashboard" class="dropdown-item" style="
+                display: flex;
+                align-items: center;
+                padding: 0.75rem 1rem;
+                color: rgba(255,255,255,0.9);
+                text-decoration: none;
+                transition: background 0.2s;
+              " onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                <span style="margin-right: 0.75rem;">📊</span>
+                <span>Dashboard</span>
+              </a>
+              {{#if (eq user.role "admin")}}
+              <a href="/admin" class="dropdown-item" style="
+                display: flex;
+                align-items: center;
+                padding: 0.75rem 1rem;
+                color: rgba(255,255,255,0.9);
+                text-decoration: none;
+                transition: background 0.2s;
+              " onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                <span style="margin-right: 0.75rem;">⚙️</span>
+                <span>Admin Panel</span>
+              </a>
+              {{/if}}
+              <button onclick="showAccountSwitcher()" class="dropdown-item" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 0.75rem 1rem;
+                background: none;
+                border: none;
+                color: rgba(255,255,255,0.9);
+                text-align: left;
+                cursor: pointer;
+                transition: background 0.2s;
+              " onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                <span style="margin-right: 0.75rem;">🔄</span>
+                <span>Switch Account</span>
+              </button>
+              <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 0.5rem 0;"></div>
+              <button onclick="handleLogout()" class="dropdown-item" style="
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 0.75rem 1rem;
+                background: none;
+                border: none;
+                color: rgba(255,255,255,0.9);
+                text-align: left;
+                cursor: pointer;
+                transition: background 0.2s;
+              " onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                <span style="margin-right: 0.75rem;">🚪</span>
+                <span>Log Out</span>
+                <span style="margin-left: auto;">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      {{else}}
+        <button class="btn btn-outline" onclick="window.location.href='/auth'">
+          <span class="animate-emoji-float">👤</span>
+          <span>Login</span>
+        </button>
+      {{/if}}
+      <button class="btn btn-primary" onclick="window.location.href='/booking'">
+        <span class="animate-emoji-rotate">✈️</span>
+        <span>Book Now</span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path id="menuIcon" d="M3 12h18M3 6h18M3 18h18"></path>
+        <path id="closeIcon" d="M18 6L6 18M6 6l12 12" style="display: none;"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-nav">
+      <a href="/">Home</a>
+      <a href="/destinations">Destinations</a>
+      <a href="/#packages">Packages</a>
+      <a href="/testimonials">Testimonials</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <div class="mobile-actions">
+        {{#if isAuthenticated}}
+          {{#if (eq user.role "admin")}}
+            <button class="btn btn-outline" onclick="window.location.href='/admin'" style="width: 100%; background: #10b981; color: white; border-color: #10b981;">Admin Dashboard</button>
+          {{/if}}
+          <button class="btn btn-outline" onclick="window.location.href='/dashboard'" style="width: 100%;">Dashboard</button>
+          <button class="btn btn-outline" onclick="showAccountSwitcher()" style="width: 100%;">Switch Account</button>
+          <button class="btn btn-outline" onclick="handleLogout()" style="width: 100%;">Logout</button>
+        {{else}}
+          <button class="btn btn-outline" onclick="window.location.href='/auth'" style="width: 100%;">Login</button>
+        {{/if}}
+        <button class="btn btn-primary" onclick="window.location.href='/booking'" style="width: 100%;">Book Now</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+// Toggle user dropdown menu
+function toggleUserDropdown() {
+  const dropdown = document.getElementById('userDropdownMenu');
+  if (dropdown) {
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+  const dropdown = document.getElementById('userDropdownMenu');
+  const button = document.getElementById('userAvatarBtn');
+  if (dropdown && button && !dropdown.contains(event.target) && !button.contains(event.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+async function handleLogout() {
+  try {
+    const response = await fetch('/api/auth/logout', { method: 'POST', headers: { 'Content-Type': 'application/json' } });
+    const data = await response.json();
+    if (data.success) window.location.href = '/';
+    else alert('Logout failed');
+  } catch (error) {
+    console.error('Logout error:', error);
+    alert('An error occurred');
+  }
+}
+
+// Show account switcher modal
+function showAccountSwitcher() {
+  // Close dropdown
+  const dropdown = document.getElementById('userDropdownMenu');
+  if (dropdown) dropdown.style.display = 'none';
+  
+  // Load and show account switcher
+  if (typeof loadAccountSwitcher === 'function') {
+    loadAccountSwitcher();
+  } else {
+    console.error('loadAccountSwitcher function not found. Make sure account-switcher.js is loaded.');
+  }
+}
+
+// Set user avatar initials
+document.addEventListener('DOMContentLoaded', function() {
+  const avatarBtn = document.getElementById('userAvatarBtn');
+  if (avatarBtn) {
+    const userName = avatarBtn.getAttribute('data-user-name');
+    if (userName) {
+      const names = userName.trim().split(' ');
+      let initials = '👤';
+      if (names.length >= 2) {
+        initials = (names[0][0] + names[names.length - 1][0]).toUpperCase();
+      } else if (names[0].length >= 2) {
+        initials = names[0].substring(0, 2).toUpperCase();
+      } else if (names[0].length === 1) {
+        initials = names[0].toUpperCase() + names[0].toUpperCase();
+      }
+      avatarBtn.textContent = initials;
+    }
+  }
+});
+</script>

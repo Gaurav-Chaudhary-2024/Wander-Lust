@@ -1,0 +1,278 @@
+/* ====================================
+   WanderLust - Dark Mode Styles
+   ==================================== */
+
+/* Dark Mode Variables */
+:root.dark-mode {
+  /* Colors - Dark Theme */
+  --background: #0F1419;
+  --foreground: #E8EAED;
+  --card: #1A1F26;
+  --card-foreground: #E8EAED;
+  --primary: #2C3E50;
+  --primary-foreground: #ffffff;
+  --secondary: #F4D03F;
+  --secondary-foreground: #0F1419;
+  --muted: #1E2329;
+  --muted-foreground: #9CA3AF;
+  --accent: #FF8A80;
+  --accent-foreground: #ffffff;
+  --border: rgba(232, 234, 237, 0.15);
+  --input-background: #1E2329;
+  --ring: #F4D03F;
+}
+
+/* Smooth theme transition */
+.theme-transition,
+.theme-transition *,
+.theme-transition *:before,
+.theme-transition *:after {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease !important;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--card);
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+.dark-mode-toggle svg {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dark-mode-toggle .sun-icon {
+  color: #F59E0B;
+}
+
+.dark-mode-toggle .moon-icon {
+  color: #60A5FA;
+}
+
+/* Fixed position toggle for pages without header actions */
+.dark-mode-toggle-fixed {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode-toggle-fixed:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark Mode Specific Overrides */
+.dark-mode .header {
+  background-color: rgba(15, 20, 25, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 20, 25, 0.3),
+    rgba(15, 20, 25, 0.7)
+  );
+}
+
+.dark-mode .btn-outline {
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.dark-mode .btn-outline:hover {
+  background: var(--muted);
+  border-color: var(--secondary);
+}
+
+.dark-mode .package-card,
+.dark-mode .feature-card,
+.dark-mode .stat-card,
+.dark-mode .destination-card,
+.dark-mode .info-card {
+  background: var(--card);
+  border-color: var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .package-card:hover,
+.dark-mode .feature-card:hover,
+.dark-mode .destination-card:hover {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode .form-input,
+.dark-mode .form-select,
+.dark-mode .form-textarea,
+.dark-mode .search-input {
+  background: var(--input-background);
+  border-color: var(--border);
+  color: var(--foreground);
+}
+
+.dark-mode .form-input:focus,
+.dark-mode .form-select:focus,
+.dark-mode .form-textarea:focus,
+.dark-mode .search-input:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.1);
+}
+
+.dark-mode .footer {
+  background: var(--card);
+  border-top-color: var(--border);
+}
+
+.dark-mode .mobile-menu {
+  background: var(--card);
+  border-right-color: var(--border);
+}
+
+.dark-mode .badge {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.dark-mode .package-badge {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Dark mode loading spinner */
+.dark-mode .loading-overlay {
+  background: var(--background);
+}
+
+.dark-mode .spinner-ring:nth-child(1) {
+  border-top-color: var(--secondary);
+}
+
+.dark-mode .spinner-ring:nth-child(2) {
+  border-right-color: var(--accent);
+}
+
+.dark-mode .spinner-ring:nth-child(3) {
+  border-bottom-color: var(--primary);
+}
+
+/* Dark mode skeleton */
+.dark-mode .skeleton,
+.dark-mode img.lazy-loading {
+  background: linear-gradient(90deg, #1E2329 25%, #2A2F38 50%, #1E2329 75%);
+  background-size: 200% 100%;
+}
+
+.dark-mode img.lazy-error {
+  background: #1E2329;
+}
+
+/* Dark mode carousel indicators */
+.dark-mode .hero-indicator,
+.dark-mode .carousel-indicator {
+  background: rgba(232, 234, 237, 0.3);
+}
+
+.dark-mode .hero-indicator.active,
+.dark-mode .carousel-indicator.active {
+  background: var(--secondary);
+}
+
+/* Dark mode location badge */
+.dark-mode .location-badge {
+  background: rgba(26, 31, 38, 0.9);
+  border-color: var(--border);
+}
+
+/* Dark mode social links */
+.dark-mode .social-link {
+  background: var(--muted);
+  border-color: var(--border);
+}
+
+.dark-mode .social-link:hover {
+  background: var(--primary);
+  border-color: var(--secondary);
+}
+
+/* Dark mode stats section */
+.dark-mode .stats-section {
+  background: var(--muted);
+}
+
+/* Dark mode features section */
+.dark-mode .features-section {
+  background: transparent;
+}
+
+/* Dark mode packages section decoration */
+.dark-mode .packages-bg-decoration .blob {
+  opacity: 0.2;
+}
+
+/* Dark mode contact particles */
+.dark-mode .contact-particles .particle,
+.dark-mode .hero-particles .particle {
+  opacity: 0.4;
+}
+
+/* Dark mode carousel controls */
+.dark-mode .carousel-button {
+  background: rgba(26, 31, 38, 0.9);
+  border-color: var(--border);
+}
+
+.dark-mode .carousel-button:hover {
+  background: var(--primary);
+  border-color: var(--secondary);
+}
+
+/* Responsive adjustments for dark mode toggle */
+@media (max-width: 768px) {
+  .dark-mode-toggle-fixed {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Print mode - disable dark mode */
+@media print {
+  :root.dark-mode {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #ffffff;
+    --primary: #1B263B;
+  }
+  
+  .dark-mode-toggle,
+  .dark-mode-toggle-fixed {
+    display: none !important;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Learn about WanderLust Travel Agency - 15+ years of creating unforgettable journeys">
+  <title>About Us - WanderLust Travel Agency</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="figma:asset/509f110c2eed2479a2a881d51c6191cd65333bb5.png">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="header-logo">
+        <img src="figma:asset/509f110c2eed2479a2a881d51c6191cd65333bb5.png" alt="WanderLust Logo" class="logo-image">
+        <h1 class="logo-text">WanderLust</h1>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="destinations.html" class="nav-link">Destinations</a>
+        <a href="index.html#packages" class="nav-link">Packages</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="header-actions">
+        <button class="btn btn-outline" onclick="window.location.href='auth.html'">
+          <span>👤</span>
+          <span>Login</span>
+        </button>
+        <button class="btn btn-primary" onclick="window.location.href='booking.html'">
+          <span>✈️</span>
+          <span>Book Now</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path id="menuIcon" d="M3 12h18M3 6h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-actions">
+          <button class="btn btn-outline" onclick="window.location.href='auth.html'" style="width: 100%;">Login</button>
+          <button class="btn btn-primary" onclick="window.location.href='booking.html'" style="width: 100%;">Book
+            Now</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>WanderLust</h3>
+          <p class="footer-description">Your trusted partner in creating unforgettable travel experiences around the
+            world.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Popular Destinations</h3>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Maldives</a></li>
+            <li><a href="destinations.html">Swiss Alps</a></li>
+            <li><a href="destinations.html">Paris</a></li>
+            <li><a href="destinations.html">Kenya Safari</a></li>
+            <li><a href="destinations.html">Tokyo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>123 Travel Street</li>
+            <li>Adventure City, AC 12345</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Email: info@wanderlust.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 WanderLust Travel Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/lazy-load.js"></script>
+  <script src="js/dark-mode.js"></script>
+  <script src="js/scroll-animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
