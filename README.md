@@ -185,7 +185,7 @@ Educational project for college submission.
 
 ---
 
-**Created by:** Your Name  
+**Created by:** Group 8   
 **Project:** WanderLust Travel Agency  
-**Course:** [Your Course Name]  
-**Date:** October 2025
+**Course:** Web Programming  
+**Date:** 15 November 2025
